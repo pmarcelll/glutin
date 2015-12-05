@@ -1,5 +1,5 @@
-#![cfg(any(target_os = "windows", target_os = "linux", target_os = "android",
-           target_os = "dragonfly", target_os = "freebsd"))]
+#![cfg(all(any(target_os = "windows", target_os = "linux", target_os = "android",
+               target_os = "dragonfly", target_os = "freebsd"), not(target_env = "asmjs")))]
 #![allow(unused_variables)]
 
 use ContextError;

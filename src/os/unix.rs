@@ -1,4 +1,4 @@
-#![cfg(any(target_os = "linux", target_os = "dragonfly", target_os = "freebsd"))]
+#![cfg(all(any(target_os = "linux", target_os = "dragonfly", target_os = "freebsd"), not(target_env = "asmjs")))]
 
 use libc;
 use Window;

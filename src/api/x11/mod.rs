@@ -1,4 +1,4 @@
-#![cfg(any(target_os = "linux", target_os = "dragonfly", target_os = "freebsd"))]
+#![cfg(all(any(target_os = "linux", target_os = "dragonfly", target_os = "freebsd"), not(target_env = "asmjs")))]
 
 pub use self::monitor::{MonitorId, get_available_monitors, get_primary_monitor};
 pub use self::window::{Window, XWindow, PollEventsIterator, WaitEventsIterator, Context, WindowProxy};

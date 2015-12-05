@@ -1,4 +1,4 @@
-#![cfg(any(target_os = "linux", target_os = "dragonfly", target_os = "freebsd"))]
+#![cfg(all(any(target_os = "linux", target_os = "dragonfly", target_os = "freebsd"), not(target_env = "asmjs")))]
 #![allow(unused_variables, dead_code)]
 
 use self::wayland::egl::{EGLSurface, is_egl_available};
